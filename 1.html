@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+
+</head>
+
+<script>
+    $(function () {
+        function test(response) {
+            response.map(function (dailyDownload) {
+                var row = [];
+
+            })
+
+        }
+        $.ajax({
+            url: "http://localhost/new_ssp/public/a7f452dbb7d8c4a161e0be5ed7c6abbd/2019-10-15/2019-10-16/DTDsp",
+            // url: "http://ssp.holmesmind.com/a7f452dbb7d8c4a161e0be5ed7c6abbd/2019-10-16/2019-10-16/DTDsp",         
+            type: "get",
+            cache: false,
+            dataType: 'json',
+            //contentType: "application/json",
+            success: function (data) {
+                // console.log(data);
+                var clicks = data.clicks;
+                test(clicks);
+            },
+
+            error: function (xhr, ajaxOptions, thrownError) {
+
+            }
+        });
+
+    });
+</script>
+</body>
+
+</html>
